@@ -1,0 +1,73 @@
+To integrate a Jekyll project with an existing GitHub repository that you've already cloned to your local machine,
+you'll need to slightly modify the process listed in the original Jekyll installation instructions. 
+Here's a step-by-step guide to help you set this up:
+
+1. **Install all prerequisites**: Ensure that Ruby, RubyGems, GCC, and 
+Make are installed on your machine. This is a requirement for running Jekyll.
+
+2. **Install the Jekyll and Bundler gems**:
+   Open a terminal and run:
+   ```
+   gem install jekyll bundler
+   ```
+
+3. **Set up Jekyll in the existing repository**:
+   Instead of creating a new Jekyll site as per the original instruction (`jekyll new myblog`), 
+   you will initialize Jekyll in the existing cloned repository. Navigate to your repository's 
+   directory on your local machine:
+   ```
+   cd path/to/your/repo
+   ```
+   Then, run:
+   ```
+   jekyll new . --force
+   ```
+   The `--force` flag tells Jekyll to install the new site files in the current directory,
+    even if it's not empty. Be cautious with this command, as it can overwrite existing files. 
+    If you have important files in the directory, consider backing them up before running this command.
+
+4. **Configure your Jekyll site**:
+   After initializing Jekyll, you'll need to configure it according to your preferences. Modify the `_config.yml` 
+   file to adjust base settings like the title, description, URL, and any other parameters relevant to your project.
+
+5. **Version control integration**:
+   Since you are working with a GitHub repository, ensure that all new files and changes are tracked. It might 
+   be a good idea to review the `.gitignore` file that Jekyll generates and adjust it according to your needs. 
+   For instance, you typically don't want to track the `_site` directory, which Jekyll automatically adds to `.gitignore`.
+
+6. **Build the site and make it available on a local server**:
+   Run the following command to build your site and serve it locally:
+   ```
+   bundle exec jekyll serve
+   ```
+   This command compiles your site and makes it accessible at `http://localhost:4000` by default.
+
+7. **Commit changes**:
+   Once you're satisfied with the setup, commit your changes to the GitHub repository:
+   ```
+   git add .
+   git commit -m "Set up Jekyll"
+   git push
+   ```
+
+Build
+
+Since Jekyll is a static site generator, it has to build the site before we can view it. 
+Run either of the following commands to build your site:
+
+jekyll build 
+
+- Builds the site and outputs a static site to a directory called _site.
+
+jekyll serve - Does jekyll build and runs it on a local web server at http://localhost:4000, 
+rebuilding the site any time you make a change.
+
+To force the browser to refresh with every change, use jekyll serve --livereload. If there’s a 
+conflict or you’d like Jekyll to serve your development site at a different URL, use the --host 
+and --port arguments, as described in the serve command options.
+
+The version of the site that jekyll serve builds in _site is not suited for deployment.
+ Links and asset URLs in sites created with jekyll serve will use https://localhost:4000 or 
+ the value set with command-line configuration, instead of the values set in your site’s 
+ configuration file. To learn about how to build your site when it’s ready for deployment, 
+ read the Deployment section of this tutorial.
