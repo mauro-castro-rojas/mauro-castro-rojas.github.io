@@ -34,16 +34,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
-collections:
-  authors:
-    output: true
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "topics"
     values:
-      layout: "author"
+      layout: "topic"
   - scope:
       path: ""
       type: "posts"
@@ -53,22 +50,24 @@ defaults:
       path: ""
     values:
       layout: "default"
-# Exclude from processing.
-# The following items will not be processed, by default.
+      
+# exclude list tells Jekyll to ignore certain files or directories during 
+# the build process. Files or directories specified in this list will not 
+# be converted into static files in the output directory (usually _site).
 # Any item listed under the `exclude:` key here will be automatically added to
 # the internal "default list".
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
