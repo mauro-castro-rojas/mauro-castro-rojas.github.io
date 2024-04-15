@@ -1,2 +1,158 @@
+// Main nav, breadcrumb, etc...
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
+
+.nav-list {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: bisque;
+  
+    .nav-list-item {
+      position: relative;
+      margin: 0;
+      .nav-list-link {
+        display: block;
+  
+        &.external > svg {
+          vertical-align: text-bottom;
+        }
+  
+        &.active {
+          font-weight: 600;
+          text-decoration: none;
+        }
+  
+        
+      }
+  
+      .nav-list-expander {
+        position: absolute;
+    
+      }
+  
+      > .nav-list {
+        display: none;
+        list-style: none;
+  
+        .nav-list-item {
+          position: relative;
+  
+          .nav-list-link {
+          }
+  
+          .nav-list-expander {
+          }
+        }
+      }
+  
+      
+    }
+  }
+  
+  .nav-category {
+    font-weight: 600;
+    text-align: start;
+    text-transform: uppercase;
+    
+  }
+  
+  .nav-list.nav-category-list {
+    > .nav-list-item {
+      margin: 0;
+  
+      > .nav-list {
+        padding: 0;
+  
+      }
+    }
+  }
+  
+  // Aux nav
+  
+  .aux-nav {
+    height: 100%;
+    overflow-x: auto;
+  
+    .aux-nav-list {
+      display: flex;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  
+    .aux-nav-list-item {
+      display: inline-block;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  
+  }
+  
 
 
+  // The basic two column layout
+
+.side-bar {
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rosybrown;
+  
+  }
+  
+  
+  
+  .site-nav,
+  .site-header,
+  .site-footer {
+    width: 100%;
+  
+  }
+  
+  .site-nav {
+    display: none;
+  
+    &.nav-open {
+      display: block;
+    }
+  
+  }
+  
+  .site-header {
+    display: flex;
+
+    align-items: center;
+  
+
+  }
+  
+  .site-title {
+    
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+ 
+    color: red;
+    
+  }
+  
+ 
+  
+
+
+
+  
+  // stylelint-disable selector-max-type
+  
+  body {
+    position: relative;
+    overflow-y: scroll;
+  
+  }
+  
+  // stylelint-enable selector-max-type
+  
