@@ -15,10 +15,6 @@
 
 {%- include sorted_pages.html pages = nav_pages -%}
 
-{%- comment -%}
-  It might be more efficient to sort the pages at each level separately.
-{%- endcomment -%}
-
 {%- assign first_level_pages = sorted_pages
     | where_exp: "item", "item.parent == nil" -%}
 {%- assign second_level_pages = sorted_pages
@@ -26,6 +22,7 @@
     | where_exp: "item", "item.grand_parent == nil" -%}
 {%- assign third_level_pages = sorted_pages
     | where_exp: "item", "item.grand_parent != nil" -%}
+
 
 <ul class="nav-list">
 {%- for node in first_level_pages -%}

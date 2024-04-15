@@ -35,24 +35,6 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-
-  
-
-defaults:
-  - scope:
-      path: ""
-      type: "topics"
-    values:
-      layout: "topic"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
       
 # exclude list tells Jekyll to ignore certain files or directories during 
 # the build process. Files or directories specified in this list will not 

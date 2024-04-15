@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mathematical models
-parent: catalog
+parent: main
 ---
 
 # A catalog of Essential Functions

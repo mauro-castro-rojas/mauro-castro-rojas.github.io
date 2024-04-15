@@ -1,4 +1,0 @@
----
-author: ted
----
-Pineapples are a tropical delight, instantly recognizable by their rugged, diamond-patterned exterior and crown of spiky green leaves. Inside, the fruit boasts a vibrant yellow interior that's both juicy and firm, offering a burst of sweetness with a tart undertone. Pineapples don't ripen significantly after being harvested, so selecting a ripe one is key — a ripe pineapple can be identified by its strong, sweet aroma and slight give to the touch. Not only are they a symbol of hospitality and exotic locales, but pineapples are also a powerhouse of nutrients, packed with vitamin C, manganese, and bromelain, an enzyme that is thought to aid in digestion. Whether eaten fresh, grilled, or baked into desserts, pineapples offer a delicious taste of the tropics and a boost of sunny vibrance to any dish.
